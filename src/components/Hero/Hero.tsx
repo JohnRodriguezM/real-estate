@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 //@ts-ignore
 import heroImage from "../../assets/img/hero-image.png";
 import { HeroContainer, HeroWrapper, ImageContainer } from "./styled";
@@ -22,6 +22,11 @@ export const Hero = () => {
               Olvida todas las dificultades para encontrar un hogar, nosotros te
               ayudamos a encontrar la casa de tus sueños
             </span>
+          </div>
+          <div className="ini-contact">
+            <Link to="/form" className="btn btn-primary">
+              Conéctemos
+            </Link>
           </div>
         </div>
         <div className="flexCenter hero-right">
