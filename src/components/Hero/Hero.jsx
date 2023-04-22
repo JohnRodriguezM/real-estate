@@ -8,24 +8,31 @@ export const Hero = () => {
   return (
     <HeroWrapper>
       <HeroContainer className="paddings innerWidth flexCenter">
-        <div className="flexCenter hero-left">
+        <div className="flexColStart hero-left">
           <div className="hero-title">
+            <div className="blue-circle" />
             <h1>
               Haciendo <br /> realidad casas <br /> soñadas
             </h1>
           </div>
-          <div className="hero-des">
-            <span>
-              Tu sueño, nuestra realidad, encuentra una variedad de propiedades
+          <div className="flexColStart hero-des">
+            <span
+
+
+
+            >
+              Tu sueño, nuestra realidad
             </span>
             <span>
-              Olvida todas las dificultades para encontrar un hogar, nosotros te
-              ayudamos a encontrar la casa de tus sueños
+              Olvida todas las dificultades para encontrar un hogar
+            </span>
+            <span>
+              Nosotros te ayudamos a encontrar la casa de tus sueños
             </span>
           </div>
           <div className="ini-contact">
             <Link to="/form" className="btn btn-primary">
-              Conéctemos
+              Envianos tus datos
             </Link>
           </div>
         </div>

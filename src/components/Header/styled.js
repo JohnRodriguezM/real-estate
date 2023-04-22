@@ -19,5 +19,14 @@ export const HeaderMenu = styled.nav`
   }
   &>a:hover{
     transform: scale(1.05);
+    color: var(--primary);
   }
 `;
+
+export const Astyle = styled.a`
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+
+  font-size: 1rem
+  `;
