@@ -14,19 +14,12 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     addUser: (state, action) =>
-      addElementDb({
-        email: action.payload.email,
-        tel: action.payload.tel,
-        address: action.payload.address,
-        city: action.payload.city,
-      })
+      addElementDb(action.payload)
     ,
-    handleChangeForm: (state, action) => {
-      return {
-        ...state,
-        [action.payload.name]: action.payload.value,
-      }
-    },
+    handleChangeForm: (state, action) => ({
+      ...state,
+      [action.payload.name]: action.payload.value,
+    }),
     resetForm: () => initialState,
 
   },

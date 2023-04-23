@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { formValues, addUser, handleChangeForm, resetForm } from "./slice/FormSlice";
 
+import Modal from 'react-bootstrap/Modal';
+
 export function FormUse() {
   const dispatch = useDispatch();
   const formSelector = useSelector(formValues);
@@ -52,48 +54,32 @@ export function FormUse() {
         backgroundColor: "var(--black)",
       }}
     >
-
       {info && (
-        <div
-          style={{
-            position: "fixed",
-            top: "0",
-            left: "0",
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+
+        <Modal
+          size="sm"
+          show={info}
+          onHide={() => setInfo(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
         >
-          <div
+          <Modal.Header closeButton>
+            <Modal.Title
+              style={{
+                textAlign: "center",
+
+              }}
+              id="example-modal-sizes-title-sm">
+              Gracias por contactarnos
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body
             style={{
-              position: "relative",
-              backgroundColor: "var(--primary)",
-              padding: "50px",
-              borderRadius: "10px",
+              textAlign: "center",
             }}
           >
-            <button
-              style={{
-                position: "absolute",
-                top: "10px",
-                right: "10px",
-                backgroundColor: "white",
-                color: "var(--primary)",
-                padding: "5px 10px",
-                border: "none",
-                fontSize: "25px",
-                cursor: "pointer",
-              }}
-              onClick={() => setInfo(false)}
-            >
-              X
-            </button>
-            <h2>En breve nos pondremos en contacto contigo</h2>
-          </div>
-        </div>
+            En breve nos comunicaremos con usted  :)
+          </Modal.Body>
+        </Modal>
       )}
 
       <button

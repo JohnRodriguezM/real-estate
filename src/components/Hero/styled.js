@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HeroWrapper = styled.div`
 color: #fff;
 padding-bottom: 2rem;
-background-color: var(--black);
+//background-color: var(--black);
 `;
 export const HeroContainer = styled.div`
   justify-content: space-between;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  background-color: var(--black);
+ //  background-color: var(--black);
   color: #fff;
 `;
 
@@ -27,6 +27,5 @@ export const Astyle = styled.a`
   color: white;
   text-decoration: none;
   margin: 0 10px;
-
   font-size: 1rem
   `;

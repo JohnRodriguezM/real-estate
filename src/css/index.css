@@ -152,3 +152,19 @@ a {
   right: 28%;
   top: -10%;
 }
+
+.stats{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.stat>:nth-child(1){
+  font-size: 1.7rem;
+  /*font-weight: 600;
+  color: var(--primary);*/
+}
+
+.stat>:nth-child(1)>:last-child{
+  color: var(--blue)
+}
+
