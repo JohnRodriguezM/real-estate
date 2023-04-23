@@ -1,0 +1,30 @@
+{
+  "sp": [
+    {
+      "email": "Correo electrónico",
+      "emailPlaceholder": "ejemplo@gmail.com",
+      "tel": "Número de teléfono",
+      "telPlaceholder": "+57 3125458785",
+      "address": "Dirección",
+      "addressPlaceholder": "Calle 123 # 45-67",
+      "city": "Ciudad",
+      "cityPlaceholder": "Bogotá",
+      "thanks": "Gracias por contactarnos",
+      "message": "Nos pondremos en contacto con usted lo antes posible."
+    }
+  ],
+  "en": [
+    {
+      "email": "Email",
+      "emailPlaceholder": "example@example.com",
+      "tel": "Phone number",
+      "telPlaceholder": "+1 408 858 8555",
+      "address": "Address",
+      "addressPlaceholder": "123 Main St",
+      "city": "City",
+      "cityPlaceholder": "San Francisco",
+      "thanks": "Thank you for contacting us",
+      "message": "We will get in touch with you as soon as possible."
+    }
+  ]
+}

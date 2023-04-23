@@ -5,6 +5,7 @@ import { FormUse } from "./components/Form/Form";
 
 import './css/App.css'
 import { Companies } from "./components/Companies/Companies";
+import { Residences } from "./components/Residencies/Residences";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
                 <Hero />
               </section>
               <Companies/>
+              <Residences />
             </section>
           </>} />
 

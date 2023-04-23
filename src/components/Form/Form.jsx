@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -12,8 +12,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { formValues, addUser, handleChangeForm, resetForm } from "./slice/FormSlice";
 
 import Modal from 'react-bootstrap/Modal';
+import { LanguageContext } from "../../context/LanguageContext";
 
 export function FormUse() {
+  const { language, setLanguage,infoLang } = useContext(LanguageContext);
   const dispatch = useDispatch();
   const formSelector = useSelector(formValues);
 
@@ -54,6 +56,20 @@ export function FormUse() {
         backgroundColor: "var(--black)",
       }}
     >
+      <button
+        onClick={() => {
+          setLanguage("en");
+          console.log('hpla')
+        }}
+      >
+        English
+      </button>
+      <button
+        onClick={() => setLanguage("es")}
+      >
+        Español
+      </button>
+
       {info && (
 
         <Modal
@@ -69,7 +85,7 @@ export function FormUse() {
 
               }}
               id="example-modal-sizes-title-sm">
-              Gracias por contactarnos
+              {infoLang.thanks}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body
@@ -77,7 +93,7 @@ export function FormUse() {
               textAlign: "center",
             }}
           >
-            En breve nos comunicaremos con usted  :)
+            {language.message}
           </Modal.Body>
         </Modal>
       )}
@@ -110,7 +126,9 @@ export function FormUse() {
       >
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Correo electrónico</Form.Label>
+            <Form.Label>
+              {infoLang.email}
+            </Form.Label>
 
             <Form.Control
               name="email"
