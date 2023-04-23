@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -15,7 +15,7 @@ import Modal from 'react-bootstrap/Modal';
 import { LanguageContext } from "../../context/LanguageContext";
 
 export function FormUse() {
-  const { language, setLanguage,infoLang } = useContext(LanguageContext);
+  const { infoLang } = useContext(LanguageContext);
   const dispatch = useDispatch();
   const formSelector = useSelector(formValues);
 
@@ -43,6 +43,8 @@ export function FormUse() {
     dispatch(resetForm())
   };
 
+
+
   return (
     <div
       style={{
@@ -56,20 +58,7 @@ export function FormUse() {
         backgroundColor: "var(--black)",
       }}
     >
-      <button
-        onClick={() => {
-          setLanguage("en");
-          console.log('hpla')
-        }}
-      >
-        English
-      </button>
-      <button
-        onClick={() => setLanguage("es")}
-      >
-        Español
-      </button>
-
+      
       {info && (
 
         <Modal
@@ -85,7 +74,7 @@ export function FormUse() {
 
               }}
               id="example-modal-sizes-title-sm">
-              {infoLang.thanks}
+              {infoLang.form.thanks}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body
@@ -93,7 +82,7 @@ export function FormUse() {
               textAlign: "center",
             }}
           >
-            {language.message}
+            {infoLang.form.message}
           </Modal.Body>
         </Modal>
       )}
@@ -127,43 +116,59 @@ export function FormUse() {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>
-              {infoLang.email}
+              {infoLang.form.email}
             </Form.Label>
 
             <Form.Control
               name="email"
               value={formSelector.email}
               onChange={handleChange}
-              type="email" placeholder="ejemplo@gmail.com" />
+              type="email" placeholder={infoLang.form.emailPlaceholder} />
           </Form.Group>
         </Row>
 
         <Form.Group className="mb-3" controlId="formGridAddress1">
-          <Form.Label>Número de teléfono</Form.Label>
+          <Form.Label>
+            {
+              infoLang.form.tel
+            }
+          </Form.Label>
           <Form.Control
             name="tel"
             onChange={handleChange}
             value={formSelector.tel}
-            placeholder="3187854785" />
+            placeholder={
+              infoLang.form.telPlaceholder
+            } />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formGridAddress2">
-          <Form.Label>Dirección</Form.Label>
+          <Form.Label>{
+            infoLang.form.address
+          }</Form.Label>
           <Form.Control
             name="address"
             onChange={handleChange}
             value={formSelector.address}
-            placeholder="Cra 28# --" />
+            placeholder={
+              infoLang.form.addressPlaceholder
+            } />
         </Form.Group>
 
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridCity">
-            <Form.Label>Ciudad</Form.Label>
+            <Form.Label>
+              {
+                infoLang.form.city
+              }
+            </Form.Label>
             <Form.Control
               name="city"
               onChange={handleChange}
               value={formSelector.city}
-              placeholder="Bogotá"
+              placeholder={
+                infoLang.form.cityPlaceholder
+              }
             />
           </Form.Group>
           {/*
@@ -193,7 +198,9 @@ export function FormUse() {
           variant="primary"
           type="submit"
         >
-          Enviar
+          {
+            infoLang.form.submit
+          }
         </Button>
       </Form>
     </div>

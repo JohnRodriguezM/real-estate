@@ -1,6 +1,30 @@
 {
-  "sp": [
-    {
+  "sp": {
+    "header": {
+      "goods": "Bienes",
+      "ourValues": "Nuestros valores",
+      "contact": "Contacto",
+      "language": "Idioma",
+      "english": "Inglés",
+      "spanish": "Español",
+      "contactUs": "Contáctenos"
+    },
+    "hero": {
+      "title": "Haciendo",
+      "titleOne": "realidad",
+      "titleTwo": "casas soñadas",
+      "partOne": "Tu sueño, nuestra realidad",
+      "partTwo": " Olvida todas las dificultades para encontrar un hogar",
+      "partThree": " Nosotros te ayudamos a encontrar la casa de tus sueños",
+      "sendData": "Envíanos tus datos",
+      "premiumGoods": "Bienes Premium",
+      "customesSatisfied": "Clientes satisfechos",
+      "yearsOfExperience": "Años de experiencia"
+    },
+    "form": {
+      "buttonSpanish": "Español",
+      "buttonEnglish": "Inglés",
+      "submit": "Enviar",
       "email": "Correo electrónico",
       "emailPlaceholder": "ejemplo@gmail.com",
       "tel": "Número de teléfono",
@@ -12,9 +36,34 @@
       "thanks": "Gracias por contactarnos",
       "message": "Nos pondremos en contacto con usted lo antes posible."
     }
-  ],
-  "en": [
-    {
+  },
+
+  "en": {
+    "header": {
+      "goods": "Goods",
+      "ourValues": "Our values",
+      "contact": "Contact",
+      "language": "Language",
+      "english": "English",
+      "spanish": "Spanish",
+      "contactUs": "Contact us"
+    },
+    "hero": {
+      "title": "Making",
+      "titleOne": "reality",
+      "titleTwo": "dream homes",
+      "partOne": "Your dream, our reality",
+      "partTwo": " Forget all the difficulties to find a home",
+      "partThree": " We help you find the home of your dreams",
+      "sendData": "Send us your data",
+      "premiumGoods": "Premium goods",
+      "customesSatisfied": "Customers satisfied",
+      "yearsOfExperience": "Years of experience"
+    },
+    "form": {
+      "buttonSpanish": "Spanish",
+      "buttonEnglish": "English",
+      "submit": "Submit",
       "email": "Email",
       "emailPlaceholder": "example@example.com",
       "tel": "Phone number",
@@ -26,5 +75,5 @@
       "thanks": "Thank you for contacting us",
       "message": "We will get in touch with you as soon as possible."
     }
-  ]
+  }
 }

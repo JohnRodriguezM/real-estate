@@ -8,30 +8,18 @@ export const LanguageContext = createContext({
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState("es");
-  const [infoLang, setInfoLang] = useState(languageData)
+  const [infoLang, setInfoLang] = useState(languageData.sp)
 
-  useEffect(() => {
-    fetch('./language.json')
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-      })
-    /*.then(data => {
-      let infoLang;
-      if (language === "es") {
-        infoLang = data.sp;
-      } else {
-        infoLang = data.en;
-      }
-      setInfoLang(infoLang);
-    })
-    .catch(error => console.error(error));*/
-  }, []);
+  const getLanguage = () => {
+    const langData = languageData[language === 'es' ? 'sp' : 'en'];
+    setInfoLang(langData);
+  };
 
   const languageState = {
     language,
     setLanguage,
     infoLang,
+    getLanguage,
   };
 
   return (
