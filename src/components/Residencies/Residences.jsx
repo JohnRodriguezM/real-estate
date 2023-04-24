@@ -1,10 +1,11 @@
 import React from 'react'
-import { RHead } from './styled'
+import { RCard, RHead } from './styled'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import "swiper/swiper.min.css"
 import "swiper/css"
 
 import data from '../../../utils/slider.json'
+import { sliderSettings } from '../../../utils/common'
 
 export const Residences = () => {
   return (
@@ -22,32 +23,29 @@ export const Residences = () => {
         </RHead>
 
         <Swiper
-          spaceBetween={50}
-          slidesPerView={1}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
+          {...sliderSettings}
         >
 
           {
             data.map((item, index) => {
               return (
-                <SwiperSlide key={index}>
-                  <div className="r-card">
-                    <div className="r-card__img">
-                      <img src={item.name} alt="" />
-                    </div>
-                    <div className="r-card__content">
-                      <div className="r-card__content__title">
-                        <span>{item.price}</span>
-                      </div>
-                      <div className="r-card__content__desc">
-                        <span>{item.detail}</span>
-                      </div>
-                      <div className="r-card__content__price">
-                        <span>{item.image}</span>
-                      </div>
-                    </div>
-                  </div>
+                <SwiperSlide key={index}
+
+                >
+                  <RCard className="flexColCenter">
+                    <img src={item.image} alt="img-houses" />
+                    <span className="secondaryText r-price">
+                      <span style={{ color: "orange" }}>$</span><span>
+                        {item.price}
+                      </span>
+                    </span>
+                    <span className="primaryText">
+                      {item.name}
+                    </span>
+                    <span className="secondaryText">
+                      {item.detail}
+                    </span>
+                  </RCard>
                 </SwiperSlide>
               )
             })
