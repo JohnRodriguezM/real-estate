@@ -8,6 +8,7 @@ import './css/App.css'
 import { Companies } from "./components/Companies/Companies";
 import { Residences } from "./components/Residencies/Residences";
 import { LanguageContext } from "./context/LanguageContext";
+import { Value } from "./components/Value/Value";
 function App() {
   const { language, getLanguage } = useContext(LanguageContext);
 
@@ -27,6 +28,7 @@ function App() {
               </section>
               <Companies />
               <Residences />
+              <Value/>
             </section>
           </>} />
 

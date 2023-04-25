@@ -6,11 +6,25 @@ import "swiper/css"
 
 import data from '../../../utils/slider.json'
 import { sliderSettings } from '../../../utils/common'
+import { SliderButtons } from './SliderButtons'
 
 export const Residences = () => {
   return (
-    <section className="r-wrapper">
-      <div className="paddings innewWidth r-container">
+    <section className="r-wrapper"
+      
+    >
+      <div className="paddings innewWidth r-container"
+        style={
+          {
+            position: "relative",
+            margin: "auto",
+            maxWidth: "1250px",
+            overflow: "hidden",
+   
+
+        }
+        }
+      >
         <RHead className="flexColStart">
           <span
             className='orangeText'
@@ -25,6 +39,7 @@ export const Residences = () => {
         <Swiper
           {...sliderSettings}
         >
+          <SliderButtons />
 
           {
             data.map((item, index) => {
