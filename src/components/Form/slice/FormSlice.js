@@ -28,6 +28,5 @@ export const counterSlice = createSlice({
 export const { addUser, handleChangeForm, resetForm } = counterSlice.actions;
 
 export const formValues = state => state.form;
-//export const historyMax = state => state.counter.historyMax;
 
 export default counterSlice.reducer;

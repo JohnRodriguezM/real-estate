@@ -19,6 +19,7 @@
   scroll-behavior: smooth;
 }
 a {
+  list-style: none;
   color: inherit;
   text-decoration: none;
 }
@@ -169,3 +170,14 @@ a {
   color: var(--blue)
 }
 
+
+/*
+  accordion classes
+*/
+.accordion{
+
+}
+
+.accordionItem{
+ 
+}

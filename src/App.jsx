@@ -9,6 +9,7 @@ import { Companies } from "./components/Companies/Companies";
 import { Residences } from "./components/Residencies/Residences";
 import { LanguageContext } from "./context/LanguageContext";
 import { Value } from "./components/Value/Value";
+import { Contact } from "./components/Contact/Contact";
 function App() {
   const { language, getLanguage } = useContext(LanguageContext);
 
@@ -29,6 +30,7 @@ function App() {
               <Companies />
               <Residences />
               <Value/>
+              <Contact/>
             </section>
           </>} />
 
