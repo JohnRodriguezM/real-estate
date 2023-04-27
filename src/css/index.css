@@ -1,4 +1,3 @@
-
 :root {
   --primary: #1f3e72;
   --secondary: rgba(255, 255, 255, 0.78);
@@ -129,21 +128,20 @@ a {
   }
 }
 
-.hero-left{
-  gap:3rem;
+.hero-left {
+  gap: 3rem;
 }
-.hero-title{
+.hero-title {
   position: relative;
   z-index: 1;
 }
 
-.hero-title>h1{
+.hero-title > h1 {
   font-weight: 600;
   font-size: 3.5rem;
   line-height: 4rem;
-
 }
-.blue-circle{
+.blue-circle {
   height: 4rem;
   width: 4rem;
   background: var(--blue);
@@ -154,30 +152,56 @@ a {
   top: -10%;
 }
 
-.stats{
+.stats {
   width: 100%;
   justify-content: space-between;
-
 }
 
-.stat>:nth-child(1){
+.stat > :nth-child(1) {
   font-size: 1.7rem;
   /*font-weight: 600;
   color: var(--primary);*/
 }
 
-.stat>:nth-child(1)>:last-child{
-  color: var(--blue)
+.stat > :nth-child(1) > :last-child {
+  color: var(--blue);
 }
 
-
-/*
-  accordion classes
-*/
-.accordion{
-
+.inner-container{
+  gap: 1.5rem;
+  background: #4161df;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 6px solid #5d77d6;
+  text-align: center;
 }
 
-.accordionItem{
- 
+.inner-container .primaryText{
+  color: #fff;
+  font-weight: 600;
+}
+
+.inner-container .secondaryText{
+  color: rgba(255, 255, 255, 0.587);
+}
+
+.inner-container .button{
+  background: #5a73d7;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 10px 0px #fff;
+  border-radius: 10px;
+}
+
+.f-container{
+  justify-content: space-between;
+}
+
+.left-side{
+  gap:1rem;
+}
+
+.f-menu{
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
 }
