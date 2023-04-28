@@ -205,3 +205,42 @@ a {
   margin-top: 1.5rem;
   font-weight: 500;
 }
+
+.menu-icon{
+  display: none;
+}
+
+@media(max-width:852px){
+  .menu-icon{
+    display: block;
+  }
+ /* .f-menu{
+    display: none;
+  }*/
+}
+
+/*hero responsive*/
+
+@media(max-width: 871px){
+  .hero-title{
+    margin-top: 2rem;
+  }
+  .hero-title > h1{
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .stats{
+    justify-content: center;
+    gap: 1.5rem
+  }
+}
+
+
+ /*residencies responsive*/
+
+ @media(max-width: 768px){
+  .r-wrapper{
+    text-align: center;
+  }
+  
+  }

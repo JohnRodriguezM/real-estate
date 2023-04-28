@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const RHead = styled.div`
 margin-bottom: 2rem;
-
+align-items: center;
  `;
 
 export const RCard = styled.div`
@@ -55,9 +55,10 @@ export const RCard = styled.div`
     text-align: center;
     /*font-weight: 600;*/
   }
+
  `;
 
- export const RButton = styled.div`
+export const RButton = styled.div`
 
 
   gap:3rem;

@@ -11,6 +11,9 @@ export const VContainer = styled.div`
   & > .v-right {
     gap: 0.5rem;
   }
+  @media(max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 export const Icon = styled.div`
@@ -45,5 +48,8 @@ export const StyledAccordionItemButton = styled(AccordionItemButton)`
   cursor: pointer;
   &>.primaryText{
     font-size: 1.1rem;
+    @media(max-width: 568px){
+      font-size: .8rem;
+    }
   }
 `;
