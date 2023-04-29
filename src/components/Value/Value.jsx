@@ -77,26 +77,6 @@ export const Value = () => {
 
         </div>
       </VContainer>
-
-      {/* {data.map((item, index) => {
-        return (
-          <Accordion allowZeroExpanded={true} key={index}>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  {item.icon}
-                  <h3>{item.heading}</h3>
-                  <MdOutlineArrowDropDown />
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <p>{item.detail}</p>
-              </AccordionItemPanel>
-            </AccordionItem>
-          </Accordion>
-        )
-      })
-      }*/}
     </section>
   )
 }

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { motion } from "framer-motion";
 export const HeroWrapper = styled.div`
 color: #fff;
 padding-bottom: 2rem;
@@ -35,6 +35,7 @@ export const ImageContainer = styled.div`
   height: 27rem;
   }
 `;
+
 
 export const HeroTitle = styled.div`
   

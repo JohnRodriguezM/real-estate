@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 //@ts-ignore
 import heroImage from "../../assets/img/hero-image.png";
-import { HeroContainer, HeroWrapper, ImageContainer } from "./styled";
+import {  HeroContainer, HeroWrapper, ImageContainer } from "./styled";
 import CountUp from "react-countup";
 import { LanguageContext } from "../../context/LanguageContext";
-
+import { motion } from "framer-motion";
 export const Hero = () => {
   const { infoLang } = useContext(LanguageContext);
   return (
@@ -14,7 +14,12 @@ export const Hero = () => {
         <div className="flexColStart hero-left">
           <div className="hero-title">
             <div className="blue-circle" />
-            <h1>
+            <motion.h1
+              initial={{ opacity: 0, y: "2rem" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.1 }}
+
+            >
               {
                 infoLang.hero.title
               } <br /> {
@@ -22,7 +27,7 @@ export const Hero = () => {
               } <br /> {
                 infoLang.hero.titleTwo
               }
-            </h1>
+            </motion.h1>
           </div>
           <div
 
@@ -108,11 +113,19 @@ export const Hero = () => {
           </div>
 
         </div>
-        <div className="flexCenter hero-right">
+        <motion.div
+          initial={{ opacity: 0, y: "2rem" }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, type: "spring", bounce: 0.1 }}
+          className="flexCenter hero-right">
           <ImageContainer className="image-container">
-            <img src={heroImage} />
+            <motion.img
+              initial={{ opacity: 0, y: "2rem" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.1 }}
+              src={heroImage} />
           </ImageContainer>
-        </div>
+        </motion.div>
       </HeroContainer>
     </HeroWrapper>
   );
