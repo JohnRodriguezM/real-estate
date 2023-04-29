@@ -15,6 +15,7 @@ export const LanguageProvider = ({ children }) => {
     setInfoLang(langData);
   };
 
+
   const languageState = {
     language,
     setLanguage,

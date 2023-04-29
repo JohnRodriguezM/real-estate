@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { RCard, RHead } from './styled'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import "swiper/swiper.min.css"
@@ -7,8 +7,10 @@ import "swiper/css"
 import data from '../../../utils/slider.json'
 import { sliderSettings } from '../../../utils/common'
 import { SliderButtons } from './SliderButtons'
+import { LanguageContext } from '../../context/LanguageContext'
 
 export const Residences = () => {
+  const { infoLang } = useContext(LanguageContext);
   return (
     <section className="r-wrapper"
       
@@ -28,11 +30,13 @@ export const Residences = () => {
         <RHead className="flexColStart">
           <span
             className='orangeText'
-          >Mejores opciones</span>
+          >
+          {infoLang.residences.bestOption}
+            </span>
           <span
             className='primaryText'
           >
-            Populares
+            {infoLang.residences.popular}
           </span>
         </RHead>
 

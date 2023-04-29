@@ -13,6 +13,15 @@ export const VContainer = styled.div`
   }
   @media(max-width: 1024px) {
     flex-direction: column;
+    & > div {
+      width: 100%;
+      align-items: center;
+      
+    }
+    & > .v-left {
+     text-align: center;
+    }
+   
   }
 `;
 

@@ -2,13 +2,19 @@ import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, Ac
 
 import 'react-accessible-accordion/dist/fancy-example.css';
 import { MdOutlineArrowDropDown } from 'react-icons/md'
-import data from '../../../utils/accordion';
+import { data, dataSpanish } from '../../../utils/accordion';
 
 import value from '../../assets/img/value.png'
 import { ImageContainer } from '../Hero/styled';
 import { Icon, StyledAccordion, StyledAccordionItem, StyledAccordionItemButton, VContainer } from './styled';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { LanguageContext } from '../../context/LanguageContext';
 export const Value = () => {
+  const { infoLang, language } = useContext(LanguageContext);
+  const [className, setClassName] = useState(null);
+
+
+
   return (
     <section className="v-wrapper">
       <VContainer className="paddings innerWidth flexCenter">
@@ -20,13 +26,21 @@ export const Value = () => {
           </ImageContainer>
         </div>
         {/*right side*/}
-        <div className="flexColStart v-right">
-          <span className="orangeText">Our Value</span>
-          <span className='primaryText'>Value we give to you</span>
+        <div
+       
+         className="flexColStart v-right">
+          <span className="orangeText">
+            {infoLang.values.ourValues}
+          </span>
+          <span
+
+           className='primaryText'>
+            {infoLang.values.valueGive}
+          </span>
           <span className='secondaryText'>
-            We always ready to help by providing the best solution for you
-            <br />
-            We beliece a goood blace to live can make your life better
+           {
+              infoLang.values.text
+           }
           </span>
 
           <StyledAccordion
@@ -34,42 +48,77 @@ export const Value = () => {
             allowMultipleExpanded={false}
             preExpanded={[0]}>
             {
-              data.map((item, index) => {
-                const [className, setClassName] = useState(null)
-                return (
-                  <StyledAccordionItem
-                    className={className}
-                    //className="accordionItem"
-                    key={index}
-                    uuid={index}>
-                    <AccordionItemHeading>
-                      <StyledAccordionItemButton
-                        className='flexCenter'
-                      >
-                        <AccordionItemState>
-                          {({ expanded }) => (expanded ? setClassName("expandend") : setClassName("collapsed"))}
-                        </AccordionItemState>
+              language === 'es' ?
+                dataSpanish.map((item, index) => {
+                  return (
+                    <StyledAccordionItem
+                      className={className}
+                      //className="accordionItem"
+                      key={index}
+                      uuid={index}>
+                      <AccordionItemHeading>
+                        <StyledAccordionItemButton
+                          className='flexCenter'
+                        >
+                          <AccordionItemState>
+                            {({ expanded }) => (expanded ? setClassName("expandend") : setClassName("collapsed"))}
+                          </AccordionItemState>
 
-                        <Icon className="flexCenter">
+                          <Icon className="flexCenter">
 
-                          {item.icon}
-                        </Icon>
-                        <span className="primaryText">
-                          {item.heading}
-                        </span>
-                        <Icon className="flexCenter">
-                          <MdOutlineArrowDropDown
-                            size={20} />
-                        </Icon>
+                            {item.icon}
+                          </Icon>
+                          <span className="primaryText">
+                            {item.heading}
+                          </span>
+                          <Icon className="flexCenter">
+                            <MdOutlineArrowDropDown
+                              size={20} />
+                          </Icon>
 
-                      </StyledAccordionItemButton>
-                    </AccordionItemHeading>
-                    <AccordionItemPanel>
-                      <p className="secondaryText">{item.detail}</p>
-                    </AccordionItemPanel>
-                  </StyledAccordionItem>
-                )
-              })
+                        </StyledAccordionItemButton>
+                      </AccordionItemHeading>
+                      <AccordionItemPanel>
+                        <p className="secondaryText">{item.detail}</p>
+                      </AccordionItemPanel>
+                    </StyledAccordionItem>
+                  )
+                })
+                : data.map((item, index) => {
+                  return (
+                    <StyledAccordionItem
+                      className={className}
+                      //className="accordionItem"
+                      key={index}
+                      uuid={index}>
+                      <AccordionItemHeading>
+                        <StyledAccordionItemButton
+                          className='flexCenter'
+                        >
+                          <AccordionItemState>
+                            {({ expanded }) => (expanded ? setClassName("expandend") : setClassName("collapsed"))}
+                          </AccordionItemState>
+
+                          <Icon className="flexCenter">
+
+                            {item.icon}
+                          </Icon>
+                          <span className="primaryText">
+                            {item.heading}
+                          </span>
+                          <Icon className="flexCenter">
+                            <MdOutlineArrowDropDown
+                              size={20} />
+                          </Icon>
+
+                        </StyledAccordionItemButton>
+                      </AccordionItemHeading>
+                      <AccordionItemPanel>
+                        <p className="secondaryText">{item.detail}</p>
+                      </AccordionItemPanel>
+                    </StyledAccordionItem>
+                  )
+                })
             }
           </StyledAccordion>
 

@@ -35,7 +35,33 @@
       "cityPlaceholder": "Bogotá",
       "thanks": "Gracias por contactarnos",
       "message": "Nos pondremos en contacto con usted lo antes posible."
+    },
+    "residences":{
+      "bestOption": "Mejores opciones",
+      "popular": "Populares"
+    },
+    "values":{
+      "ourValues": "Nuestro valor",
+      "valueGive": "Valor que te damos",
+      "text": "Siempre estamos listos para ayudarlo brindándole la mejor solución.\n Creemos que un buen lugar para vivir puede mejorar su vida"
+    },
+    "getStarted": {
+      "title": "Comienza ahora con Inmuweb",
+      "text1": "Contactanos y encuenta los mejores tratos y las últimas noticias sobre nuestro productos",
+      "text2": "Encuenta tú hogar pronto y disfruta la mejor experiencia con nosotros",
+      "button": "Comenzar"
+    },
+    "footer": {
+      "span1": "Nuestra visión es hacer que todas las personas",
+      "span2": "tengan un buen lugar para vivir",
+      "span3": "Información",
+      "span4": "Villavicencio, CO ",
+      "span5": "Propiedad",
+      "span6": "Servicios",
+      "span7": "Producto",
+      "span8": "Sobre nosotros"
     }
+
   },
 
   "en": {
@@ -74,6 +100,31 @@
       "cityPlaceholder": "San Francisco",
       "thanks": "Thank you for contacting us",
       "message": "We will get in touch with you as soon as possible."
+    },
+    "residences":{
+      "bestOption": "Best options",
+      "popular": "Popular"
+    },
+    "values":{
+      "ourValues": "Our value",
+      "valueGive": "Value we give you",
+      "text": "We always ready to help by providing the best solution for you. \n We beliece a goood blace to live can make your life better"
+    },
+    "getStarted": {
+      "title": "Get started now with Inmuweb",
+      "text1": "Contact us and find the best deals and latest news about our products",
+      "text2": "Find your residence soon and enjoy the best experience with us",
+      "button": "Get started"
+    },
+    "footer": {
+      "span1": "Our vision is to make all people",
+      "span2": "have a good place to live",
+      "span3": "Information",
+      "span4": "Villavicencio, CO ",
+      "span5": "Property",
+      "span6": "Services",
+      "span7": "Product",
+      "span8": "About us"
     }
   }
 }
