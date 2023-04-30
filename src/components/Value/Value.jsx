@@ -2,7 +2,7 @@ import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, Ac
 
 import 'react-accessible-accordion/dist/fancy-example.css';
 import { MdOutlineArrowDropDown } from 'react-icons/md'
-import { data, dataSpanish } from '../../../utils/accordion';
+import { data, dataSpanish } from '../../utils/accordion';
 
 import value from '../../assets/img/value.png'
 import { ImageContainer } from '../Hero/styled';
